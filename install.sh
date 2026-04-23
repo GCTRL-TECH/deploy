@@ -100,7 +100,7 @@ pull_images() {
   info "Logging into image registry..."
   local registry_token
   registry_token=$(cat /tmp/gctrl_registry_token)
-  echo "$registry_token" | docker login ghcr.io -u gctrl --password-stdin &>/dev/null
+  echo "$registry_token" | docker login ghcr.io -u TortillaJackson --password-stdin &>/dev/null
   rm -f /tmp/gctrl_registry_token
   success "Registry login OK"
 
@@ -115,7 +115,7 @@ generate_config() {
   mkdir -p "${INSTALL_DIR}" "${CONFIG_DIR}" "${INSTALL_DIR}/data"
 
   # Download compose template
-  curl -fsSL "https://raw.githubusercontent.com/gctrl/deploy/main/compose-template.yml" \
+  curl -fsSL "https://raw.githubusercontent.com/GCTRL-TECH/deploy/main/compose-template.yml" \
     -o "${INSTALL_DIR}/docker-compose.yml"
 
   # Fetch RS256 public key from server
