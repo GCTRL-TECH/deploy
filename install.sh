@@ -3,7 +3,7 @@
 # Usage: curl -fsSL https://gctrl.tech/install | bash
 set -euo pipefail
 
-GCTRL_VERSION=100e07e6f69d3b6bc34c1b187a61389c1d85b11a
+GCTRL_VERSION=07b458fe473ef40ecf77edbe3922f24327287ac8
 API_URL="https://api.gctrl.tech"
 INSTALL_DIR="${HOME}/gctrl"
 CONFIG_DIR="${INSTALL_DIR}/config"
