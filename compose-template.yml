@@ -5,7 +5,7 @@ version: "3.8"
 
 services:
   gctrl-agent:
-    image: ghcr.io/gctrl/agent:latest
+    image: ghcr.io/gctrl-tech/agent:latest
     container_name: gctrl-agent
     restart: unless-stopped
     ports:
@@ -25,7 +25,7 @@ services:
       retries: 3
 
   gctrl-kex:
-    image: ghcr.io/gctrl/kex:latest
+    image: ghcr.io/gctrl-tech/kex:latest
     container_name: gctrl-kex
     restart: unless-stopped
     ports:
@@ -60,7 +60,7 @@ services:
               capabilities: [gpu]
 
   gctrl-fuse:
-    image: ghcr.io/gctrl/fuse:latest
+    image: ghcr.io/gctrl-tech/fuse:latest
     container_name: gctrl-fuse
     restart: unless-stopped
     ports:
@@ -82,7 +82,7 @@ services:
       - gctrl
 
   gctrl-api:
-    image: ghcr.io/gctrl/web:latest
+    image: ghcr.io/gctrl-tech/app:latest
     container_name: gctrl-api
     restart: unless-stopped
     ports:
@@ -110,7 +110,7 @@ services:
       - ollama-net
 
   gctrl-web:
-    image: ghcr.io/gctrl/web:latest
+    image: ghcr.io/gctrl-tech/web:latest
     container_name: gctrl-web
     restart: unless-stopped
     ports:
